@@ -14,24 +14,25 @@ jobs:
         - checkout
         - run: echo"A fisrt Hello word"
         - run: sleep 25
-two:
-docker:
-  -image: cimg/ruby:3.0.2
-  auth:
-	username: mydockerhub-user
-	password: $DOCKERHUB_PASSWORD
+  two:
+    docker:
+        -image: cimg/ruby:3.0.2
+        auth:
+          username: mydockerhub-user
+          password: $DOCKERHUB_PASSWORD
 
-steps:
-	-run: echo "A second Hello word"
-	-run: sleep 15
+    steps:
+        - checkout
+        - run: echo "A second Hello word"
+        - run: sleep 15
 
 
 workflows:
-version: 2.1
-one_and_two:
-jobs:
-  -one
-  -two
+  version: 2.1
+  one_and_two:
+    jobs:
+      -one
+      -two
 
 
 
