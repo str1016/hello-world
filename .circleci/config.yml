@@ -11,7 +11,6 @@ jobs:
         password: $DOCKERHUB_PASSWORD
   
   steps:
-    -checkout
     -run: echo "A fisrt Hello word"
     -run: sleep 25
   two:
