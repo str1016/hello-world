@@ -10,10 +10,10 @@ jobs:
         username: mydockerhub-user
         password: $DOCKERHUB_PASSWORD
   
-  steps:
-    -checkout
-    -run: echo"A fisrt Hello word"
-    -run: sleep 25
+    steps:
+		-checkout
+		-run: echo"A fisrt Hello word"
+		-run: sleep 25
   two:
     docker:
       -image: cimg/ruby:3.0.2
@@ -21,9 +21,9 @@ jobs:
         username: mydockerhub-user
         password: $DOCKERHUB_PASSWORD
   
-  steps:
-    -run: echo "A second Hello word"
-    -run: sleep 15
+	steps:
+		-run: echo "A second Hello word"
+		-run: sleep 15
 
 
 workflows:
@@ -32,6 +32,3 @@ workflows:
     jobs:
       -one
       -two
-
-
-
