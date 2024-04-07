@@ -22,9 +22,9 @@ jobs:
         password: $DOCKERHUB_PASSWORD
   
   steps:
-  -checkout
-  -run: echo "A second Hello word"
-  -run: sleep 15
+    -checkout
+    -run: echo "A second Hello word"
+    -run: sleep 15
 
 
 workflows:
