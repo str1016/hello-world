@@ -13,7 +13,7 @@ jobs:
   steps:
     -checkout
     -run: echo"A fisrt Hello word"
-    - run: sleep 25
+    -run: sleep 25
   two:
     docker:
       -image: cimg/ruby:3.0.2
