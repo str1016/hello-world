@@ -31,8 +31,8 @@ workflows:
   version: 2.1
   one_and_two:
     jobs:
-      -one
-      -two
+      - one
+      - two
 
 
 
