@@ -12,7 +12,7 @@ jobs:
   
   steps:
     -checkout
-    - run: 
+    -run: 
        command: echo "A fisrt Hello word"
     -run:
       command: sleep 25
